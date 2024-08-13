@@ -22,7 +22,7 @@
                             @csrf
 
                             <div class="form-group ">
-                                <label for="title">{{ __('Title') }}</label>
+                                <label class="required" for="title">{{ __('Title') }}</label>
                                 <input id="title" type="text"
                                     class="form-control @error('titlee') is-invalid @enderror" name="title"
                                     value="{{ old('title') }}" required autocomplete="title" autofocus>
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="form-group ">
-                                <label for="author">{{ __('Author') }}</label>
+                                <label class="required" for="author">{{ __('Author') }}</label>
                                 <input id="author" type="author"
                                     class="form-control @error('author') is-invalid @enderror" name="author"
                                     value="{{ old('author') }}" required autocomplete="author">
@@ -60,7 +60,7 @@
                             </div>
 
                             <div class="form-group ">
-                                <label for="published_date">{{ __('Published_Date') }}</label>
+                                <label class="required" for="published_date">{{ __('Published_Date') }}</label>
                                 <input id="published_date" type="date" class="form-control" name="published_date"
                                     required autocomplete="published_date">
                             </div>
