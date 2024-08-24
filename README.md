@@ -27,6 +27,8 @@ php artisan migrate
 php artisan db:seed
 php artisan serve
 ```
+use email : test@example.com and password : 123 to login
+
 ### 2. Optimize Routes (optional)
 These steps are optional but are good to do.
 ```bash
