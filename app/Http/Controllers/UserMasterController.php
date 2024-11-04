@@ -29,7 +29,7 @@ class UserMasterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
-        dd($request);
+        dd($validator,$validator->fails());
 
         if ($validator->fails()) {
             return redirect()->back()
