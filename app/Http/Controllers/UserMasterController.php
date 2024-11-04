@@ -29,13 +29,14 @@ class UserMasterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
+        dd($request);
 
         if ($validator->fails()) {
             return redirect()->back()
                 ->withErrors($validator->errors())
                 ->withInput();
         }
-dd($request);
+
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
