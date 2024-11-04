@@ -23,7 +23,7 @@ class UserMasterController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -35,7 +35,7 @@ class UserMasterController extends Controller
                 ->withErrors($validator->errors())
                 ->withInput();
         }
-
+dd($request);
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
